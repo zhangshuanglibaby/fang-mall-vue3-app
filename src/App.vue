@@ -1,8 +1,10 @@
+<!--
+ * @Date: 2022-12-27 20:44:17
+ * @LastEditors: zhangshuangli
+ * @LastEditTime: 2022-12-27 22:09:36
+ * @Description: 这是****文件
+-->
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
