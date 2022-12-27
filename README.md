@@ -1,3 +1,9 @@
+<!--
+ * @Date: 2022-12-27 20:44:21
+ * @LastEditors: zhangshuangli
+ * @LastEditTime: 2022-12-27 21:51:23
+ * @Description: 这是****文件
+-->
 # mall-vue3-app
 
 ## Project setup
@@ -22,3 +28,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+ui框架使用的是vant4 + 按需引入vant
+浏览器适配使用viewport布局
+下载 npm install postcss-px-to-viewport --save-dev
+新建postcss.config.js 配置将px转成视口单位

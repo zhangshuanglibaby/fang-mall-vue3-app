@@ -1,3 +1,9 @@
+<!--
+ * @Date: 2022-12-27 20:44:17
+ * @LastEditors: zhangshuangli
+ * @LastEditTime: 2022-12-27 21:59:11
+ * @Description: 这是****文件
+-->
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
