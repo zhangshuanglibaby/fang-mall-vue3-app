@@ -3,6 +3,13 @@
 @orange: #ff6b01;
 @bc: #f7f7f7;
 @fc: #ffffff;
+@navBarHeight: 90px;
+
+// 页面的高度
+.pageHeight {
+  height: calc(100vh - @navBarHeight);
+  overflow-y: auto;
+}
 
 // 背景图片地址和大小
 .bis(@url) {
@@ -61,6 +68,19 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 // 宽高

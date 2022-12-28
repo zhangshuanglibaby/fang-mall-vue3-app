@@ -1,19 +1,21 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 23:54:25
+ * @LastEditTime: 2022-12-29 01:08:09
  * @Description: 这是****文件
 -->
 <template>
-  <!-- 头部 -->
-  <HomeHeader />
-  <!-- 轮播图 -->
-  <Swiper :list="swiperList" />
-  <!-- 分类 -->
-  <CategoryList  />
-  <!-- 商品/新品上线 -->
-  <HomeGood v-for="(item, key, index) in goods" :key="key" :list="item" :title="goodsTitle[index]"></HomeGood>
-  <Navbar />
+  <div class="home pageHeight">
+    <!-- 头部 -->
+    <HomeHeader />
+    <!-- 轮播图 -->
+    <Swiper :list="swiperList" />
+    <!-- 分类 -->
+    <CategoryList  />
+    <!-- 商品/新品上线 -->
+    <HomeGood v-for="(item, key, index) in goods" :key="key" :list="item" :title="goodsTitle[index]"></HomeGood>
+    <Navbar />
+  </div>
 </template>
 <script setup>
 import HomeHeader from './components/HomeHeader.vue'
