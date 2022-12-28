@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 15:04:07
+ * @LastEditTime: 2022-12-28 15:37:11
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -43,3 +43,5 @@ vue全局引入less样式文件
 分开安装：npm i style-resources-loader，npm i vue-cli-plugin-style-resources-loader
 需要在vue.config.js中额外配置
 方法二：直接 vue add style-resources-loader，自动会在vue.config.js中引入配置
+
+定义globalComponents配置自动挂载vue的全局组件
