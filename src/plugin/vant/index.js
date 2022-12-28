@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 22:14:19
+ * @LastEditTime: 2022-12-28 22:22:23
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -10,7 +10,8 @@ import {
   Icon,
   Swipe,
   SwipeItem,
-  showToast
+  showToast,
+  Skeleton
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -22,4 +23,5 @@ export default (ctx) => {
     .use(Icon)
     .use(Swipe)
     .use(SwipeItem)
+    .use(Skeleton)
 }
