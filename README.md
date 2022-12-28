@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-27 23:35:55
+ * @LastEditTime: 2022-12-28 11:54:48
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -36,3 +36,4 @@ ui框架使用的是vant4 + 按需引入vant
 新增plugin文件夹下的vant文件 二次封装van-button
 
 新增common/style下的样式文件，base.less、mixin.less
+router写入自动引入路径方法

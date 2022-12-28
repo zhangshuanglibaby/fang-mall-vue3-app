@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 20:44:17
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-27 22:40:38
+ * @LastEditTime: 2022-12-28 00:04:42
  * @Description: 这是****文件
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -11,8 +11,8 @@ const getList = (fileList) => {
   const list = fileList.keys().map(item => {
     const relativePath = item.substr(1)
     const file = require('@/views' + relativePath) // 引入的文件路径
-    const path = relativePath.replace('/index.vue', '') // 访问路径
-    console.log(path, 'path')
+    let path = relativePath.replace('/index.vue', '') // 访问路径
+    path = path.replace(path[1], path[1].toLowerCase())// 首字母变小写
     return {
       name: path.substr(1).replace(/\//g, '-'),
       path,
@@ -25,6 +25,7 @@ const getList = (fileList) => {
 
 const pageFile = require.context("@/views", true, /index.vue/)
 const routeList = getList(pageFile)
+console.log(routeList, 'routeList')
 const routes = [
   // {
   //   path: '/about',
