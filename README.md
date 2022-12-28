@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 15:57:26
+ * @LastEditTime: 2022-12-28 16:54:20
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -46,6 +46,6 @@ vue全局引入less样式文件
 
 定义globalComponents配置自动挂载vue的全局组件
 
-配置axios
+配置axios, 在vue的原型上挂载$api方法，方式和vue2不一样，请注意
 
 开发轮播图组件
