@@ -1,17 +1,21 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 21:24:13
+ * @LastEditTime: 2022-12-28 21:42:47
  * @Description: 这是****文件
 -->
 <template>
   <!-- 头部 -->
   <HomeHeader />
+  <!-- 轮播图 -->
   <Swiper :list="swiperList" />
+  <!-- 分类 -->
+  <CategoryList />
   <Navbar />
 </template>
 <script setup>
 import HomeHeader from './components/HomeHeader.vue'
+import CategoryList from './components/CategoryList.vue'
 import Swiper from '@/components/modules/Swiper.vue'
 import { onMounted, getCurrentInstance, reactive, toRefs } from 'vue'
 const { proxy: { $api } } = getCurrentInstance() // 获取挂载在vue实例上的$api
