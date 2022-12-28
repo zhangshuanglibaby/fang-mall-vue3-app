@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 11:54:48
+ * @LastEditTime: 2022-12-28 15:04:07
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -37,3 +37,9 @@ ui框架使用的是vant4 + 按需引入vant
 
 新增common/style下的样式文件，base.less、mixin.less
 router写入自动引入路径方法
+注意router-link的引入方式发生变化
+vue全局引入less样式文件
+方法一：
+分开安装：npm i style-resources-loader，npm i vue-cli-plugin-style-resources-loader
+需要在vue.config.js中额外配置
+方法二：直接 vue add style-resources-loader，自动会在vue.config.js中引入配置

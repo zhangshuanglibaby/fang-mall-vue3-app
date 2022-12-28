@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 20:44:17
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 00:04:42
+ * @LastEditTime: 2022-12-28 15:10:31
  * @Description: 这是****文件
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
@@ -25,7 +25,6 @@ const getList = (fileList) => {
 
 const pageFile = require.context("@/views", true, /index.vue/)
 const routeList = getList(pageFile)
-console.log(routeList, 'routeList')
 const routes = [
   // {
   //   path: '/about',
