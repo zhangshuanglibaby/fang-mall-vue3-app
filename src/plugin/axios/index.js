@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-28 15:57:06
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 16:32:43
+ * @LastEditTime: 2022-12-28 20:55:22
  * @Description: 这是****文件
  */
 import router from '@/router/index'
@@ -27,7 +27,7 @@ service.interceptors.response.use(res => {
     return Promise.reject(res)
   }
   if (res.data.resultCode === 200) {
-    return res.data
+    return res.data.data
   }
   res?.data?.message && Toast.fail(res.data.message)
   if (res.data.resultCode === 416) {
