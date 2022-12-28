@@ -1,11 +1,16 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 13:47:17
+ * @LastEditTime: 2022-12-28 15:42:28
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
-import { Button, Icon } from 'vant'
+import {
+  Button,
+  Icon,
+  Swipe,
+  SwipeItem
+} from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
 
@@ -13,4 +18,6 @@ import 'vant/lib/index.css'
 export default (ctx) => {
   ctx.use(Button)
     .use(Icon)
+    .use(Swipe)
+    .use(SwipeItem)
 }
