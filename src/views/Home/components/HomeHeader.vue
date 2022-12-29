@@ -1,11 +1,11 @@
 <!--
  * @Date: 2022-12-28 14:22:37
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 15:09:41
+ * @LastEditTime: 2022-12-29 13:55:45
  * @Description: 这是****文件
 -->
 <template>
-  <header class="home-header">
+  <header class="home-header" :style="{ background: bgStyle }">
     <router-link to="/category" custom v-slot="{ navigate }"><van-icon name="apps-o" class="menu-icon" @click="navigate" /></router-link>
     <div class="header-search">
       <span class="app-name">栗子商城</span>
@@ -15,6 +15,16 @@
     <router-link to="login" custom><span class="login">登陆</span></router-link>
   </header>
 </template>
+<script setup>
+import { defineProps, computed } from 'vue'
+const props  = defineProps({
+  bgOpacity: Number
+})
+
+const bgStyle = computed(() => { 
+  return `rgba(21, 67, 160, ${props.bgOpacity})`
+})
+</script>
 <style lang="less" scoped>
 /*
   -----头部------ */
