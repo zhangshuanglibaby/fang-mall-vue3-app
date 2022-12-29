@@ -1,15 +1,15 @@
 <!--
  * @Date: 2022-12-28 22:18:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 00:16:47
+ * @LastEditTime: 2022-12-29 17:50:35
  * @Description: 这是****文件
 -->
 <template>
   <div class="home-good">
-    <header class="good-header">{{ props.title }}</header>
-    <van-skeleton title :row="3" :loading="!props.list">
+    <header class="good-header">{{ title }}</header>
+    <van-skeleton title :row="3" :loading="!list">
       <div class="good-box">
-        <div class="good-item" v-for="item in props.list" :key="item.goodsId">
+        <div class="good-item" v-for="item in list" :key="item.goodsId">
           <img :src="$filters.prefix(item.goodsCoverImg)" alt="">
           <div class="good-desc">
             <div class="title">{{ item.goodsName }}</div>
@@ -22,7 +22,7 @@
 </template>
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps({
+defineProps({
   list: Array,
   title: String
 })
@@ -37,7 +37,7 @@ const props = defineProps({
     font-weight: 500;
   }
   .good-box {
-    .fj('flex-start');
+    .fj(flex-start);
     flex-wrap: wrap;
     .good-item {
       .boxSizing;

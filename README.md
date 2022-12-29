@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 01:12:52
+ * @LastEditTime: 2022-12-29 20:35:59
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -51,3 +51,8 @@ vue全局引入less样式文件
 开发首页轮播图组件、首页的分类、首页的商品
 
 开发navbar底部导航组件
+
+给home的顶部增加滚动渐变底色效果
+
+开发登陆页
+    -开发顶部的导航标题

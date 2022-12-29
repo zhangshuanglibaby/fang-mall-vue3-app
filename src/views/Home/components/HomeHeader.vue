@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 14:22:37
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 13:55:45
+ * @LastEditTime: 2022-12-29 17:43:13
  * @Description: 这是****文件
 -->
 <template>
@@ -12,7 +12,7 @@
       <van-icon name="search" class="search-icon" />
       <router-link custom to="/product-list?from=home" class="search-title">尽情搜索，应有尽有</router-link>
     </div>
-    <router-link to="login" custom><span class="login">登陆</span></router-link>
+    <router-link to="/login"><span class="login">登陆</span></router-link>
   </header>
 </template>
 <script setup>
@@ -33,8 +33,7 @@ const bgStyle = computed(() => {
   top: 0;
   left: 0;
   .wh(100%, 100px);
-  .fj();
-  line-height: 100px;
+  .fj(space-between);
   .sc(15px, #fff);
   padding: 0 30px;
   z-index: 1000;

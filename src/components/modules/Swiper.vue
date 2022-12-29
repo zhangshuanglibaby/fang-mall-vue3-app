@@ -1,19 +1,19 @@
 <!--
  * @Date: 2022-12-28 15:41:09
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 21:31:11
+ * @LastEditTime: 2022-12-29 17:50:07
  * @Description: 这是****文件
 -->
 <template>
   <van-swipe class="my-swipe" :autoplay="3000" indicator-color="#1543a0">
-    <van-swipe-item v-for="(item, index) in props.list" :key="index">
+    <van-swipe-item v-for="(item, index) in list" :key="index">
       <img :src="item.carouselUrl" alt="" @click="handleJump(item.redirectUrl)">
     </van-swipe-item>
   </van-swipe>
 </template>
 <script setup>
 import { defineProps } from 'vue'
-const props = defineProps({
+defineProps({
   list: Array
 })
 

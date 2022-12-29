@@ -4,7 +4,7 @@
 @bc: #f7f7f7;
 @fc: #ffffff;
 @navBarHeight: 90px;
-
+@headerHeight: 88px;
 // 页面的高度
 .pageHeight {
   height: calc(100vh - @navBarHeight);
@@ -108,7 +108,8 @@
 }
 
 // flex局部
-.fj(@type: space-between) {
+.fj(@type: center) {
   display: flex;
-  justify-content: space-between;
+  justify-content: @type;
+  align-items: center;
 }
