@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 20:52:02
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 21:18:15
+ * @LastEditTime: 2022-12-29 22:04:19
  * @Description: 这是****文件
 -->
 <template>
@@ -10,7 +10,7 @@
   </div>
 </template>
 <script setup>
-import { ref, reactive, onMounted } from 'vue'
+import { ref, reactive, onMounted, defineExpose } from 'vue'
 const verify = ref(null)
 const imgCode = ref('')
 const pool = ref('ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890') // 定义的字符串池
@@ -107,4 +107,10 @@ const randomColor = (min, max) => {
 const randomNum = (min, max) => {
   return parseInt(Math.random() * (max - min) + min)
 }
+
+// 向外暴露
+defineExpose({
+  handleDraw,
+  imgCode
+})
 </script>

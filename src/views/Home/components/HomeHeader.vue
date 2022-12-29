@@ -1,18 +1,19 @@
 <!--
  * @Date: 2022-12-28 14:22:37
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 17:43:13
+ * @LastEditTime: 2022-12-29 23:47:26
  * @Description: 这是****文件
 -->
 <template>
   <header class="home-header" :style="{ background: bgStyle }">
-    <router-link to="/category" custom v-slot="{ navigate }"><van-icon name="apps-o" class="menu-icon" @click="navigate" /></router-link>
+    <router-link to="/category" custom v-slot="{ navigate }"><van-icon name="apps-o" class="menu-icon" :class="{ active }" @click="navigate" /></router-link>
     <div class="header-search">
       <span class="app-name">栗子商城</span>
       <van-icon name="search" class="search-icon" />
       <router-link custom to="/product-list?from=home" class="search-title">尽情搜索，应有尽有</router-link>
     </div>
-    <router-link to="/login"><span class="login">登陆</span></router-link>
+    <router-link to="/login" v-if="!$store.state.token"><span class="login">登陆</span></router-link>
+    <router-link to="/user" v-else><van-icon name="manager" class="menu-icon" :class="{ active }" /></router-link>
   </header>
 </template>
 <script setup>
@@ -20,7 +21,9 @@ import { defineProps, computed } from 'vue'
 const props  = defineProps({
   bgOpacity: Number
 })
-
+const active = computed(() => {
+  return Boolean(props.bgOpacity)
+})
 const bgStyle = computed(() => { 
   return `rgba(21, 67, 160, ${props.bgOpacity})`
 })
@@ -42,6 +45,9 @@ const bgStyle = computed(() => {
     color: @primary;
     font-size: 34px;
     line-height: 100px;
+    &.active {
+      color: #fff;
+    }
   }
   .header-search {
     display: flex;

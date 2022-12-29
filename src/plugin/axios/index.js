@@ -1,12 +1,12 @@
 /*
  * @Date: 2022-12-28 15:57:06
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 20:55:22
+ * @LastEditTime: 2022-12-29 23:32:04
  * @Description: 这是****文件
  */
 import router from '@/router/index'
 import axios from 'axios'
-import { Toast } from 'vant'
+import { showSuccessToast } from 'vant'
 import store from '@/store/index'
 // 创建axios实例
 const service = axios.create({
@@ -23,13 +23,13 @@ const service = axios.create({
 // 添加响应拦截
 service.interceptors.response.use(res => {
   if (typeof res.data !== 'object') {
-    Toast.fail('服务端异常！')
+    showSuccessToast('服务端异常！')
     return Promise.reject(res)
   }
   if (res.data.resultCode === 200) {
     return res.data.data
   }
-  res?.data?.message && Toast.fail(res.data.message)
+  res?.data?.message && showSuccessToast(res.data.message)
   if (res.data.resultCode === 416) {
     router.push({ path: '/login' })
   }

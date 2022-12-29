@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 21:19:47
+ * @LastEditTime: 2022-12-29 23:48:59
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -56,6 +56,7 @@ vue全局引入less样式文件
 
 开发顶部的导航标题
 
-开发验证码组件 --主要是用了canvas
-
 开发登陆页
+    开发验证码组件 --主要是用了canvas
+    注意有的时候使用ref引用组件实例的方法和属性，组件内需要使用defineExpose暴露出去
+    登录的密码使用js-md5加密 将md5方法挂载搭配实例
