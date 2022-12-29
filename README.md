@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 20:35:59
+ * @LastEditTime: 2022-12-29 21:19:47
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -54,5 +54,8 @@ vue全局引入less样式文件
 
 给home的顶部增加滚动渐变底色效果
 
+开发顶部的导航标题
+
+开发验证码组件 --主要是用了canvas
+
 开发登陆页
-    -开发顶部的导航标题
