@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 21:40:58
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-28 22:16:39
+ * @LastEditTime: 2022-12-30 16:04:28
  * @Description: 这是****文件
 -->
 <template>
@@ -62,7 +62,7 @@ const handleTips = () => {
   $toast('敬请期待！')
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .category-list {
   display: flex;
   flex-shrink: 0;

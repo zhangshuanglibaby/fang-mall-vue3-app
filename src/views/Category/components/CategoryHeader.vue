@@ -1,12 +1,12 @@
 <!--
  * @Date: 2022-12-30 13:16:49
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-30 13:32:05
+ * @LastEditTime: 2022-12-31 02:01:08
  * @Description: 这是****文件
 -->
 <template>
   <div class="category-header van-hairline--bottom">
-    <van-icon name="arrow-left" />
+    <van-icon name="arrow-left" @click="back" />
     <div class="header-search">
       <van-icon name="search" class="search-icon" />
       <router-link to="/productList" class="search-title">
@@ -17,7 +17,14 @@
   </div>
   <div class="block"></div>
 </template>
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const back = () => {
+  router.replace({ path: '/' })
+}
+</script>
 <style lang="less" scoped>
 .category-header {
   position: fixed;
@@ -48,5 +55,8 @@
       line-height: 42px;
     }
   }
+}
+.block {
+  height: 100px;
 }
 </style>
