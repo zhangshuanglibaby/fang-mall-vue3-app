@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 20:44:11
+ * @LastEditTime: 2022-12-30 11:23:22
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -13,7 +13,8 @@ import {
   showToast,
   Skeleton,
   Form,
-  Field
+  Field,
+  Cell
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -28,4 +29,5 @@ export default (ctx) => {
     .use(Skeleton)
     .use(Form)
     .use(Field)
+    .use(Cell)
 }
