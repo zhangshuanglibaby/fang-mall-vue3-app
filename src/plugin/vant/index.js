@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-30 11:23:22
+ * @LastEditTime: 2022-12-31 22:38:13
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -14,7 +14,10 @@ import {
   Skeleton,
   Form,
   Field,
-  Cell
+  Cell,
+  ActionBar,
+  ActionBarIcon,
+  ActionBarButton
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -30,4 +33,7 @@ export default (ctx) => {
     .use(Form)
     .use(Field)
     .use(Cell)
+    .use(ActionBar)
+    .use(ActionBarIcon)
+    .use(ActionBarButton)
 }

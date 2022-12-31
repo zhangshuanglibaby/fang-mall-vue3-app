@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-31 02:02:17
+ * @LastEditTime: 2022-12-31 23:18:45
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -69,3 +69,6 @@ vue全局引入less样式文件
     实现的效果：1、点击左侧菜单，自动定位右侧内容   2、右侧内容滚动到不同菜单，自动定位左侧菜单
                 需要使用元素的scrollIntoView方法
                 监听滚动后面需要增加节流来优化性能
+
+开发商品详情页
+    将购物车的数量存储在vuex中

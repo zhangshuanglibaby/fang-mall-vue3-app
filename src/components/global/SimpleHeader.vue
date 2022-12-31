@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 17:30:52
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 20:34:05
+ * @LastEditTime: 2022-12-31 14:31:13
  * @Description: 这是****文件
 -->
 <template>
@@ -54,6 +54,8 @@ const goBack = () => {
   .boxSizing;
   padding: 0 20px;
   font-size: 32px;
+  background: #fff;
+  z-index: 1000;
   .simple-header-name {
     font-size: 28px;
   }

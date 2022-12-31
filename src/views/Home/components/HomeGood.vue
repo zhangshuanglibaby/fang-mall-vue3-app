@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 22:18:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 17:50:35
+ * @LastEditTime: 2022-12-31 13:40:39
  * @Description: 这是****文件
 -->
 <template>
@@ -9,7 +9,7 @@
     <header class="good-header">{{ title }}</header>
     <van-skeleton title :row="3" :loading="!list">
       <div class="good-box">
-        <div class="good-item" v-for="item in list" :key="item.goodsId">
+        <div class="good-item" v-for="item in list" :key="item.goodsId" @click="goToDetail(item.goodsId)">
           <img :src="$filters.prefix(item.goodsCoverImg)" alt="">
           <div class="good-desc">
             <div class="title">{{ item.goodsName }}</div>
@@ -22,10 +22,17 @@
 </template>
 <script setup>
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
 defineProps({
   list: Array,
   title: String
 })
+const router = useRouter()
+
+// 跳转商品详情页
+const goToDetail = (goodsId) => {
+  router.push({ path: '/productDetail', query: {goodsId } })
+}
 </script>
 <style lang="less">
 .home-good {
