@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-31 22:38:13
+ * @LastEditTime: 2023-01-01 11:13:25
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -17,7 +17,12 @@ import {
   Cell,
   ActionBar,
   ActionBarIcon,
-  ActionBarButton
+  ActionBarButton,
+  Checkbox,
+  CheckboxGroup,
+  SwipeCell,
+  Stepper,
+  SubmitBar
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -36,4 +41,9 @@ export default (ctx) => {
     .use(ActionBar)
     .use(ActionBarIcon)
     .use(ActionBarButton)
+    .use(Checkbox)
+    .use(CheckboxGroup)
+    .use(SwipeCell)
+    .use(Stepper)
+    .use(SubmitBar)
 }

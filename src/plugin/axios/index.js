@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-28 15:57:06
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 23:32:04
+ * @LastEditTime: 2023-01-01 11:35:36
  * @Description: 这是****文件
  */
 import router from '@/router/index'
@@ -12,13 +12,21 @@ import store from '@/store/index'
 const service = axios.create({
   baseURL: process.env.NODE_ENV == 'development' ? '//backend-api-01.newbee.ltd/api/v1' : '//backend-api-01.newbee.ltd/api/v1',
   timeout: 6000, // 请求超时时间
-  withCredentials: true, // 异步请求携带cookie
-  headers: {
-    'Content-Type': 'application/json', // 设置后端需要的传参类型
-    'token': localStorage.getItem('token') || '',
-    'X-Requested-With': 'XMLHttpRequest'
-  }
+  withCredentials: true // 异步请求携带cookie
 })
+
+// 请求拦截
+service.interceptors.request.use(
+  (config) => {
+    config.headers['Content-Type'] = 'application/json'  // 设置后端需要的传参类型
+    config.headers['token'] = store.state.token || ''
+    config.headers['X-Requested-With'] = 'XMLHttpRequest'
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
 
 // 添加响应拦截
 service.interceptors.response.use(res => {

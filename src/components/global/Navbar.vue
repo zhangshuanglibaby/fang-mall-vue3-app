@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 15:28:10
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 01:11:47
+ * @LastEditTime: 2023-01-01 20:17:13
  * @Description: 这是****文件
 -->
 <template>
@@ -36,6 +36,7 @@ const navList = [
   height: @navBarHeight;
   background: #fff;
   transform: translateZ(0);
+  z-index: 10;
   .nav-list {
     width: 100%;
     height: 100%;
@@ -47,6 +48,8 @@ const navList = [
       text-align: center;
       .nav-icon {
         font-size: 44px;
+        margin: 0 auto;
+        z-index: 100;
       }
       .nav-title {
         font-size: 24px;
