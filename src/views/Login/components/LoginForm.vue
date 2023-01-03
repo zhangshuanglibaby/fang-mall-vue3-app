@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 20:40:06
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 23:28:00
+ * @LastEditTime: 2023-01-03 22:29:50
  * @Description: 这是****文件
 -->
 <template>
@@ -44,12 +44,11 @@ import { reactive, ref, getCurrentInstance } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
 import VueImageVerify from '@/components/modules/VueImageVerify.vue'
-import { login, register } from '@/service/user'
 
 const store = useStore()
 const router = useRouter()
 const verifyRef = ref(null)
-const { proxy: { $toast, $md5 } } = getCurrentInstance()
+const { proxy: { $toast, $md5, $api } } = getCurrentInstance()
 const loginForm = reactive({
   username: '', // 用户名
   password: '', // 密码
@@ -74,7 +73,7 @@ const onSubmit = async (value) => {
     return
   }
   // 判断是登录 or 注册状态
-  const method = isLogin.value ? login : register
+  const method = isLogin.value ? $api.userLogin : $api.userRegister
   const params = {
     loginName: username
   }

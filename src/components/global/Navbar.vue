@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 15:28:10
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-01 20:17:13
+ * @LastEditTime: 2023-01-03 22:24:06
  * @Description: 这是****文件
 -->
 <template>
@@ -12,7 +12,7 @@
         v-for="item in navList"
         :key="item.path"
         :to="item.path">
-        <van-icon class="nav-icon" :name="item.icon" />
+        <van-icon class="nav-icon" :name="item.icon" :badge="item.path === '/cart' && $store.state.cartCount || ''" />
         <span class="nav-title">{{ item.title }}</span>
       </router-link>
     </section>

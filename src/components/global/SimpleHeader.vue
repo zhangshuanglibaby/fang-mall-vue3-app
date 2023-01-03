@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 17:30:52
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-31 14:31:13
+ * @LastEditTime: 2023-01-02 22:47:12
  * @Description: 这是****文件
 -->
 <template>
@@ -16,7 +16,6 @@
   </header>
   <!-- 这是空盒子 -->
   <div class="block"></div>
-  <div></div>
 </template>
 <script setup>
 import { defineProps, defineEmits } from 'vue'
@@ -43,7 +42,7 @@ const goBack = () => {
   router.push({ path: props.back })
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .simple-header {
   position: fixed;
   top: 0;

@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-01 11:13:25
+ * @LastEditTime: 2023-01-03 14:09:13
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -22,7 +22,10 @@ import {
   CheckboxGroup,
   SwipeCell,
   Stepper,
-  SubmitBar
+  SubmitBar,
+  Popup,
+  AddressList,
+  AddressEdit
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -46,4 +49,7 @@ export default (ctx) => {
     .use(SwipeCell)
     .use(Stepper)
     .use(SubmitBar)
+    .use(Popup)
+    .use(AddressList)
+    .use(AddressEdit)
 }

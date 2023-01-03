@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-01 10:15:35
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-01 22:52:35
+ * @LastEditTime: 2023-01-02 16:20:50
  * @Description: 这是****文件
 -->
 <template>
@@ -11,7 +11,7 @@
         <div class="good-item">
           <van-checkbox :name="item.cartItemId"></van-checkbox>
           <div class="good-img">
-            <img :src="item.goodsCoverImg" alt="">
+            <img :src="$filters.prefix(item.goodsCoverImg)" alt="">
           </div>
           <div class="good-desc">
             <div class="good-title">
@@ -143,7 +143,7 @@ const { checkList, checkAll } = toRefs(state)
     .wh(100px, 100%);
   }
   .submit-bar {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
   }
 }
 </style>

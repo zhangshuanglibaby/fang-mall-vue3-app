@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-31 23:15:47
+ * @LastEditTime: 2023-01-03 22:30:20
  * @Description: 这是****文件
 -->
 <template>
@@ -21,21 +21,19 @@
 import { onMounted, reactive, getCurrentInstance, toRefs, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import { getDetail } from '@/service/good'
-import { addCart } from '@/service/cart'
 import DetailContent from './components/DetailContent.vue'
 
 const route = useRoute()
 const router = useRouter()
 const store = useStore()
-const { proxy: { $filters, $toast } } = getCurrentInstance()
+const { proxy: { $filters, $toast, $api } } = getCurrentInstance()
 let state = reactive({
   detail: {}
 })
 
 onMounted( async () => {
   const { goodsId } = route.query
-  const res = await getDetail(goodsId)
+  const res = await $api.goodGetDetail(goodsId)
   res.goodsCarouselList.forEach(item => $filters.prefix(item.goodsCarouselList))
   state.detail = res
   store.dispatch('updateCart')
@@ -44,7 +42,7 @@ const { detail } = toRefs(state)
 
 // 加入购物车 | 加入购物车
 const handleAddCart = async (type) => {
-  await addCart({ goodsCount: 1, goodsId: detail.value.goodsId})
+  await $api.cartAddCart({ goodsCount: 1, goodsId: detail.value.goodsId})
   store.dispatch('updateCart')
   switch (type) {
     case 'add': // 加入购物车
