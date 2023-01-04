@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 18:48:01
+ * @LastEditTime: 2023-01-04 20:46:37
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -30,7 +30,8 @@ import {
   Tabs,
   PullRefresh,
   List,
-  Card
+  Card,
+  showConfirmDialog
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -38,6 +39,7 @@ import 'vant/lib/index.css'
 // 注册组需要的组件
 export default (ctx) => {
   ctx.config.globalProperties.$toast = showToast
+  ctx.config.globalProperties.$dialog = showConfirmDialog
   ctx.use(Button)
     .use(Icon)
     .use(Swipe)
