@@ -1,12 +1,12 @@
 <!--
  * @Date: 2023-01-04 13:14:33
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 17:13:24
+ * @LastEditTime: 2023-01-04 18:26:34
  * @Description: 这是****文件
 -->
 <template>
   <div class="content-list">
-    <van-pull-refresh :model-value="refreshing" @refresh="onRefresh">
+    <van-pull-refresh @refresh="onRefresh">
       <van-list
         :model-value="loading"
         :finished="finished"
@@ -30,7 +30,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, toRefs } from 'vue'
 
 const props = defineProps({
   refreshing: Boolean, // 下拉刷新状态
@@ -38,12 +38,12 @@ const props = defineProps({
   loading: Boolean, // 列表加载状态
   productList: Array // 列表数据
 })
-console.log(props, 'propspropsprops')
-const emit = defineEmits(['load'])
+const emit = defineEmits(['refresh', 'load'])
 // const { proxy: { $filters } } = getCurrentInstance()
 // 下拉刷新
 const onRefresh = () => {
-
+  console.log(refreshing.value, 'refreshingrefreshing')
+  emit('refresh')
 }
 
 // 列表加载
@@ -51,6 +51,7 @@ const onLoad = () => {
   emit('load')
 }
 
+const { refreshing } = toRefs(props)
 </script>
 <style lang="less">
 .content-list {

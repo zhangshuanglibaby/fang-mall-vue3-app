@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 13:33:25
+ * @LastEditTime: 2023-01-04 18:48:01
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -29,7 +29,8 @@ import {
   Tab,
   Tabs,
   PullRefresh,
-  List
+  List,
+  Card
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -60,4 +61,5 @@ export default (ctx) => {
     .use(Tabs)
     .use(PullRefresh)
     .use(List)
+    .use(Card)
 }

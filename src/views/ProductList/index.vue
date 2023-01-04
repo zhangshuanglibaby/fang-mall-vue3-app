@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 17:38:22
+ * @LastEditTime: 2023-01-04 18:18:45
  * @Description: 这是****文件
 -->
 <template>
@@ -14,7 +14,7 @@
     <van-tabs type="card" color="#15429e" @change="changeTab">
       <van-tab v-for="item in tabList" :key="item.name" :title="item.title" :name="item.name"></van-tab>
     </van-tabs>
-    <ContentList v-bind="listObj"  @load="handleLoad" />
+    <ContentList v-bind="listObj" @refresh="onRefresh"  @load="handleLoad" />
   </div>
 </template>
 <script setup>
@@ -47,8 +47,8 @@ const state = reactive({
 const initData = async () => {
   const { categoryId } = route.query
   if(!categoryId && !state.searchText) {
-    listObj.finished = true
-    listObj.loading = false
+    state.listObj.finished = true
+    state.listObj.loading = false
     return
   }
   const params = {
@@ -66,6 +66,7 @@ const initData = async () => {
   if(state.pageObj.pageNum >= state.pageObj.totalPage) {
     state.listObj.finished = true
   }
+  console.log(state.listObj, 'listObjlistObj')
 }
 
 // 切换标签页
@@ -76,21 +77,21 @@ const changeTab = (value) => {
 
 // 列表加载
 const handleLoad = () => {
-  if(!state.refreshing && state.pageObj.pageNum < state.pageObj.totalPage) {
+  if(!state.listObj.refreshing && state.pageObj.pageNum < state.pageObj.totalPage) {
     state.pageObj.pageNum += 1
   }
-  if(state.refreshing) {
+  if(state.listObj.refreshing) {
     state.listObj.productList = []
-    state.refreshing = !state.refreshing
+    state.listObj.refreshing = false
   }
   initData()  
 }
 
 // 刷新
 const onRefresh = () => {
-  state.refreshing = true
-  state.finished = false
-  state.loading = true
+  state.listObj.refreshing = true
+  state.listObj.finished = false
+  state.listObj.loading = true
   state.pageObj.pageNum = 1
   handleLoad() 
 }

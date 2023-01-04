@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 17:35:16
+ * @LastEditTime: 2023-01-04 19:19:26
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -90,3 +90,6 @@ vue全局引入less样式文件
     使用了组件的v-model方法
     使用v-list 注意要给父盒子高度 && 设置overflow为auto 才会触发他的onload事件
     把列表的finished默认为true，否则会触发两次onload事件
+
+需要 解决下拉刷新的问题
+    van-list触发两次onload的问题
