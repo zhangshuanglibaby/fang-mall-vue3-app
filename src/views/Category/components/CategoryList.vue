@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-30 13:33:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-31 01:59:21
+ * @LastEditTime: 2023-01-04 12:42:10
  * @Description: 这是****文件
 -->
 <template>
@@ -38,15 +38,14 @@
   </div>
 </template>
 <script setup>
-import { defineProps, ref, reactive, nextTick, watch } from 'vue';
-import { useRouter } from 'vue-router'
+import { defineProps, defineEmits,ref, reactive, nextTick, watch } from 'vue';
 import ListScroll from '@/components/modules/ListScroll.vue'
 
 const props = defineProps({
   // 数据
   list: Array
 })
-const router = useRouter()
+const emit = defineEmits(['select'])
 const listGrooupRef = ref(null)
 const state = reactive({
   currentIndex: 0,
@@ -89,8 +88,7 @@ const handleScroll = (scrollTop) => {
 
 // 选择产品
 const selectProduct = (categoryId) => {
-  router.push({ path: '/productList', query: { categoryId } })
-
+  emit('select', categoryId)
 }
 </script>
 <style lang="less" scoped>

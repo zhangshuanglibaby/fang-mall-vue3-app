@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-03 22:25:12
+ * @LastEditTime: 2023-01-04 17:35:16
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -86,3 +86,7 @@ vue全局引入less样式文件
         无地址 - 跳转到地址页面
 开发地址列表页面
 开发地址编辑页面
+开发产品列表页
+    使用了组件的v-model方法
+    使用v-list 注意要给父盒子高度 && 设置overflow为auto 才会触发他的onload事件
+    把列表的finished默认为true，否则会触发两次onload事件

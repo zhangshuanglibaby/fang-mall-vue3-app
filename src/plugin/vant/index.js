@@ -1,7 +1,7 @@
 /*
  * @Date: 2022-12-27 22:06:13
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-03 14:09:13
+ * @LastEditTime: 2023-01-04 13:33:25
  * @Description: 这是****文件
  */
 // 引入需要使用的组件
@@ -25,7 +25,11 @@ import {
   SubmitBar,
   Popup,
   AddressList,
-  AddressEdit
+  AddressEdit,
+  Tab,
+  Tabs,
+  PullRefresh,
+  List
 } from 'vant'
 // 引入vant样式
 import 'vant/lib/index.css'
@@ -52,4 +56,8 @@ export default (ctx) => {
     .use(Popup)
     .use(AddressList)
     .use(AddressEdit)
+    .use(Tab)
+    .use(Tabs)
+    .use(PullRefresh)
+    .use(List)
 }
