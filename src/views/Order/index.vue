@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 19:28:14
+ * @LastEditTime: 2023-01-05 22:05:59
  * @Description: 这是****文件
 -->
 <template>
@@ -75,13 +75,20 @@ const loadData = async () => {
     pageNumber: state.page.pageNum,
     status: state.status
   }
+  state.loading = true
+  state.finished = false
   const res = await $api.orderGetOrderList(params)
   state.list = [...state.list, ...res.list]
   state.page.totalPage = res.totalPage
-  state.loading = false
+  if(!state.list.length) {
+    state.finished = true
+    return
+  }
+  // 数据加载完毕
   if(state.page.pageNum >= res.totalPage) {
     state.finished = true
   }
+  state.loading = false
 }
 
 // 更改tab

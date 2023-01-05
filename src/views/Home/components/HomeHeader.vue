@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 14:22:37
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 23:47:26
+ * @LastEditTime: 2023-01-05 21:51:16
  * @Description: 这是****文件
 -->
 <template>
@@ -10,7 +10,7 @@
     <div class="header-search">
       <span class="app-name">栗子商城</span>
       <van-icon name="search" class="search-icon" />
-      <router-link custom to="/product-list?from=home" class="search-title">尽情搜索，应有尽有</router-link>
+      <router-link to="/productList?from=home" class="search-title">尽情搜索，应有尽有</router-link>
     </div>
     <router-link to="/login" v-if="!$store.state.token"><span class="login">登陆</span></router-link>
     <router-link to="/user" v-else><van-icon name="manager" class="menu-icon" :class="{ active }" /></router-link>
