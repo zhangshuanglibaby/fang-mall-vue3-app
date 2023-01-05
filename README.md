@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 20:44:21
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 19:19:26
+ * @LastEditTime: 2023-01-05 13:52:16
  * @Description: 这是****文件
 -->
 # mall-vue3-app
@@ -93,3 +93,5 @@ vue全局引入less样式文件
 
 需要 解决下拉刷新的问题
     van-list触发两次onload的问题
+
+开发账号设置页面

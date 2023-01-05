@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-27 22:11:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-30 12:18:34
+ * @LastEditTime: 2023-01-05 13:12:30
  * @Description: 这是****文件
 -->
 <template>
@@ -15,13 +15,5 @@
 <script setup>
 import UserHeader from './components/UserHeader.vue'
 import UserList from './components/UserList.vue'
-import { onMounted } from 'vue'
-import { useStore } from 'vuex'
-
-const store = useStore()
-
-onMounted(() => {
-  store.dispatch('setUserInfo')
-})
 </script>
 <style lang="less"></style>

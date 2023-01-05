@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 20:40:06
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-03 22:29:50
+ * @LastEditTime: 2023-01-05 13:47:46
  * @Description: 这是****文件
 -->
 <template>
@@ -82,6 +82,7 @@ const onSubmit = async (value) => {
   $toast({ type: 'succcess', message: '成功！' })
   if(isLogin.value) { // 登陆状态
     store.commit('setToken', res) // 缓存token
+    store.dispatch('setUserInfo') // 获取用户信息
     router.replace({ path: '/' }) // 跳到首页
     return
   }

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-30 11:19:57
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-30 12:25:39
+ * @LastEditTime: 2023-01-05 13:51:31
  * @Description: 这是****文件
 -->
 <template>
@@ -20,8 +20,7 @@ const router = useRouter()
 const list = [
   { title: '我的订单', path: '/order' },
   { title: '账号管理', path: '/setting' },
-  { title: '地址管理', path: '/address' },
-  { title: '关于我们', path: '/about' },
+  { title: '地址管理', path: '/address' }
 ]
 
 // 跳路径

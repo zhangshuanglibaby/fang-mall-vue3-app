@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-30 11:07:20
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-30 12:23:52
+ * @LastEditTime: 2023-01-05 13:49:06
  * @Description: 这是****文件
 -->
 <template>
@@ -12,7 +12,7 @@
         <div class="user-desc">
           <span>昵称：{{ $store.state.userInfo.nickName }}</span>
           <span>登录名：{{ $store.state.userInfo.loginName }}</span>
-          <span>个性签名：想买就买～</span>
+          <span>个性签名：{{ $store.state.userInfo.introduceSign }}</span>
         </div>
       </div>
     </div>
