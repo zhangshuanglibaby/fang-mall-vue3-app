@@ -1,13 +1,14 @@
 /*
  * @Date: 2022-12-27 20:44:17
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-27 22:22:01
+ * @LastEditTime: 2023-02-03 00:22:02
  * @Description: 这是****文件
  */
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    "vue/setup-compiler-macros": true
   },
   'extends': [
     'plugin:vue/vue3-essential',

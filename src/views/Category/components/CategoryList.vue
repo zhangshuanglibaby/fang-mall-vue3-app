@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-30 13:33:19
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 12:42:10
+ * @LastEditTime: 2023-02-03 00:26:00
  * @Description: 这是****文件
 -->
 <template>
@@ -38,7 +38,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, defineEmits,ref, reactive, nextTick, watch } from 'vue';
+import { ref, reactive, nextTick, watch } from 'vue';
 import ListScroll from '@/components/modules/ListScroll.vue'
 
 const props = defineProps({

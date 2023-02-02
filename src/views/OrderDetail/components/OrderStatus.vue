@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-04 19:54:46
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 20:28:02
+ * @LastEditTime: 2023-02-03 00:25:33
  * @Description: 这是****文件
 -->
 <template>
@@ -22,7 +22,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, computed } from 'vue'
+import { computed } from 'vue'
 const props = defineProps({
   detail: Object
 })

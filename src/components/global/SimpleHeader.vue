@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-29 17:30:52
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-02 22:47:12
+ * @LastEditTime: 2023-02-03 00:22:47
  * @Description: 这是****文件
 -->
 <template>
@@ -18,7 +18,6 @@
   <div class="block"></div>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
 import { useRouter } from 'vue-router'
 const props = defineProps({
   title: { // 标题

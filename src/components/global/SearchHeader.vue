@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-04 12:45:31
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 16:46:36
+ * @LastEditTime: 2023-02-03 00:18:42
  * @Description: 这是****文件
 -->
 <template>
@@ -25,7 +25,6 @@
   <div class="block"></div>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
 import { useRouter } from 'vue-router'
 
 defineProps({

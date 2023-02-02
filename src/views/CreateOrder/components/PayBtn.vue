@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-02 23:30:16
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-03 22:10:29
+ * @LastEditTime: 2023-02-03 00:25:05
  * @Description: 这是****文件
 -->
 <template>
@@ -14,7 +14,6 @@
   </div>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
 defineProps({
   totalPrice: Number
 })

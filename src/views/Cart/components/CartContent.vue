@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-01 10:15:35
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-02 16:20:50
+ * @LastEditTime: 2023-02-03 00:23:06
  * @Description: 这是****文件
 -->
 <template>
@@ -53,7 +53,7 @@
   </div>
 </template>
 <script setup>
-import { defineProps, toRefs, reactive, getCurrentInstance, defineEmits, computed } from 'vue'
+import { toRefs, reactive, getCurrentInstance, computed } from 'vue'
 const props = defineProps({
   list: Array
 })

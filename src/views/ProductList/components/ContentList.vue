@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-04 13:14:33
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-05 23:51:17
+ * @LastEditTime: 2023-02-03 00:25:47
  * @Description: 这是****文件
 -->
 <template>
@@ -25,7 +25,6 @@
   </van-list>
 </template>
 <script setup>
-import { defineProps, defineEmits } from 'vue'
 
 defineProps({
   refreshing: Boolean, // 下拉刷新状态

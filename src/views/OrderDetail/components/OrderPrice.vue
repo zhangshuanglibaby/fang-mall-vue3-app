@@ -1,7 +1,7 @@
 <!--
  * @Date: 2023-01-04 20:02:35
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-04 20:25:04
+ * @LastEditTime: 2023-02-03 00:25:25
  * @Description: 这是****文件
 -->
 <template>
@@ -17,7 +17,6 @@
 	</div>
 </template>
 <script setup>
-import { defineProps } from 'vue'
 defineProps({
 	detail: Object
 })

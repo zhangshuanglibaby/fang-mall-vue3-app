@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 15:41:09
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2022-12-29 17:50:07
+ * @LastEditTime: 2023-02-03 00:22:53
  * @Description: 这是****文件
 -->
 <template>
@@ -12,7 +12,6 @@
   </van-swipe>
 </template>
 <script setup>
-import { defineProps } from 'vue'
 defineProps({
   list: Array
 })

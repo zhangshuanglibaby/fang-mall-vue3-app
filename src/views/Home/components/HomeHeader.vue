@@ -1,7 +1,7 @@
 <!--
  * @Date: 2022-12-28 14:22:37
  * @LastEditors: zhangshuangli
- * @LastEditTime: 2023-01-05 21:51:16
+ * @LastEditTime: 2023-02-03 00:25:18
  * @Description: 这是****文件
 -->
 <template>
@@ -17,7 +17,7 @@
   </header>
 </template>
 <script setup>
-import { defineProps, computed } from 'vue'
+import { computed } from 'vue'
 const props  = defineProps({
   bgOpacity: Number
 })
